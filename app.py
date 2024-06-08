@@ -76,7 +76,7 @@ with st.form("my_form"):
         X[labels[22]] = st.selectbox(labels[22], ('No', 'Yes'), disabled=st.session_state.omit_feat_mat[22])
         X[labels[23]] = st.selectbox(labels[23], ('No', 'Yes'), disabled=st.session_state.omit_feat_mat[23])
     
-    predict_btn = st.form_submit_button("Pedict")
+    predict_btn = st.form_submit_button("Predict")
 
 
 
@@ -132,7 +132,7 @@ if predict_btn:
     if y_pred == 1:
         st.error("The Patient has Chronic Kidney Disease (CKD).", icon='🩺')
     else:
-        st.balloons()
+       
         st.success("The Patient does not have Chronic Kidney Disease (CKD).", icon='🩺')
 
 
