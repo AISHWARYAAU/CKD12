@@ -32,7 +32,7 @@ def disable_widgets():
     indices = [labels.index(item) for item in st.session_state.omit_feat if item in labels]
     st.session_state.omit_feat_mat[indices] = True
 
-st.header("👇Input the Patient's Data")
+st.header("Input the Patient's Data")
 omit_feat = st.multiselect("Select the features you don't know", labels, 
                             placeholder="Ommited Features ex. Potassium (i don't know the potassium level).",
                             key="omit_feat", on_change=disable_widgets)
